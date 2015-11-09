@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>price</th>
+      <th>description</th>
+      <th>img_url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.price %></td>
+        <td><%= item.description %></td>
+        <td><%= item.img_url %></td>
+        <td><%= link_to 'Add to cart', addtocart_path(item) %></td>
+        <td><%= link_to 'Show', item %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+</table>

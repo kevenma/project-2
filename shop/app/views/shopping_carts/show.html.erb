@@ -1,0 +1,9 @@
+<p>
+  Shopping Cart
+  <% current_user.shopping_cart.items.each do |item| %>
+  <p>
+    <%= item.name %>
+    <%= link_to 'Remove' %>
+  </p>
+  <% end %>
+</p>
